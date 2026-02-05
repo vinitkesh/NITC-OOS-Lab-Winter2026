@@ -1,4 +1,8 @@
 *.class
 */.class
-.zip
+*.zip
 */.zip
+*.jar
+*/.jar
+*.war
+*/.war
