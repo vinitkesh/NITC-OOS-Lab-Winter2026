@@ -1,7 +1,11 @@
 package vehicles;
 
 public class Vehicle {
-    private String licensePlate;
+    String licensePlate;
+
+    public Vehicle(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
 
     public String getLicensePlate() {
         return licensePlate;

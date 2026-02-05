@@ -1,5 +1,4 @@
 package company;
-
 public class Employee {
 
     // Protected field
