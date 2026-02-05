@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Assignment1 {
+public class Assg1 {
 
     // 1) Factorial
     public static long factorial(int n) {
