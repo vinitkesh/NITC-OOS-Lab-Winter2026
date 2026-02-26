@@ -11,11 +11,11 @@ Taken by Prof. Joe Cherri Ross in Winter 2026
 
 Table for assignments and topics covered:
 
-| Assignment Number | Topics Covered | 
+| ASSG # | Topics Covered | 
 |-------------------|----------------|
-| 1                 | Basic Java - Arthematic,loops, arrays,etc |
-| 2                 | Input in java,  String manipualtion, Java Arrays, recursion |
-| 3                 | Basics of class, Exception handling, ArrayList, HashSet |
-| 4                 | Sorting, LinkedHashSet, HashMap, PriorityQueue, Iterator, TreeMap |
-| 5                 | Inheritance, access specifiers, super |
-| 6                 | Java generics, Inheritance, class associations |
+| 1      | Basic Java - Arthematic,loops, arrays,etc |
+| 2      | Input in java,  String manipualtion, Java Arrays, recursion |
+| 3      | Basics of class, Exception handling, ArrayList, HashSet |
+| 4      | Sorting, LinkedHashSet, HashMap, PriorityQueue, Iterator, TreeMap |
+| 5      | Inheritance, access specifiers, super |
+| 6      | Java generics, Inheritance, class associations |

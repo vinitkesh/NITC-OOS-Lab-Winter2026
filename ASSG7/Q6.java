@@ -23,6 +23,7 @@ class Patient {
     int age;
     String ailment;
     int priority; // 1=Critical, 2=Serious, 3=Moderate, 4=Minor, 5=Non-urgent
+    int arrivalCounter; // To maintain the order of arrival for patients with the same priority
 
     public Patient(String name, int age, String ailment, int priority) {
         this.name = name;
@@ -39,20 +40,23 @@ class Patient {
 
 class HospitalEmergencyRoom {
     private PriorityQueue<Patient> patients;
+    private int arrivalCounter; // To maintain the order of arrival for patients with the same priority
 
     public HospitalEmergencyRoom() {
         // Custom comparator to sort patients by priority and then by arrival order
+        this.arrivalCounter = 0;
         this.patients = new PriorityQueue<>((p1, p2) -> {
             if (p1.priority != p2.priority) {
                 return Integer.compare(p1.priority, p2.priority); // Lower priority number first
             } else {
-                return 0; // If priorities are the same, maintain insertion order (FIFO)
+                return Integer.compare(p1.arrivalCounter, p2.arrivalCounter); // If priorities are the same, maintain insertion order (FIFO)
             }
         });
     }
 
     public void addPatient(Patient patient) {
         // Add patient to the priority queue
+        patient.arrivalCounter = arrivalCounter++;
         patients.add(patient);
     }
 
@@ -82,6 +86,7 @@ public class Q6 {
         // Create patients with different priority levels
         Patient patient1 = new Patient("Alice", 30, "Fracture", 2);
         Patient patient2 = new Patient("Bob", 25, "Headache", 4);
+        Patient patient3_0 = new Patient("Moses", 40, "Heart Attack", 1);
         Patient patient3 = new Patient("Charlie", 40, "Heart Attack", 1);
         Patient patient4 = new Patient("David", 35, "Flu", 5);
         Patient patient5 = new Patient("Eve", 28, "Burns", 3);
@@ -91,6 +96,7 @@ public class Q6 {
         // Add patients to the emergency room
         emergencyRoom.addPatient(patient1);
         emergencyRoom.addPatient(patient2);
+        emergencyRoom.addPatient(patient3_0);
         emergencyRoom.addPatient(patient3);
         emergencyRoom.addPatient(patient4);
         emergencyRoom.addPatient(patient5);

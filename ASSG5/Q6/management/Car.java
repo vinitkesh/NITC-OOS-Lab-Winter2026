@@ -6,6 +6,7 @@ public class Car extends Vehicle {
     
     public Car(String licensePlate, String model) {
         super(licensePlate);
+        // this.licensePlate = licensePlate; // Initialize the inherited field
         this.model = model; 
     }
 

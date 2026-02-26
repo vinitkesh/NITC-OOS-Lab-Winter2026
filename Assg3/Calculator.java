@@ -23,13 +23,17 @@ public class Calculator {
                     break;
                 case "/":
                     if (b == 0) {
+                        sc.close();
                         throw new ArithmeticException("Division by zero handled. Enter a valid argument.");
                     }
                     result = a / b;
                     break;
                 default:
+                    sc.close();
                     throw new IllegalArgumentException("Invalid operator");
             }
+
+            sc.close();
 
             System.out.println(result);
 
