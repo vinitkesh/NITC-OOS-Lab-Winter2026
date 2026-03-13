@@ -23,12 +23,13 @@ import java.util.Map;
     // the director in its details. SportsGame might display the team names in its
     // details.
 
-    // 3. Create a class EventManager with the following methods: addEvent(Event
-    // event) adds an event to the manager's list, bookEventTickets(String
-    // eventName, int numberOfTickets) attempts to book tickets for an event by its
-    // name, cancelEventTickets(String eventName, int numberOfTickets) cancels
-    // tickets for an event by its name and displayAllEvents() displays details of all
-    // events.
+    // 3. Create a class EventManager with the following methods: 
+    //   - addEvent(Event event) adds an event to the manager's list, 
+    //   - bookEventTickets(String eventName, int numberOfTickets) attempts to book 
+    //      tickets for an event by its name, 
+    //   - cancelEventTickets(String eventName, int numberOfTickets) cancels tickets 
+    //      for an event by its name and 
+    //   - displayAllEvents() displays details of all events.
 
     // 4. In the main method, create instances of Concert, TheaterPlay, and
     // SportsGame. Add these events to an EventManager instance. Demonstrate
@@ -153,10 +154,14 @@ public class Q1 {
         Event sports = new SportsGame("City Derby", 200, new String[]{"Team A", "Team B"});
         manager.addEvent(concert); manager.addEvent(play);
         manager.addEvent(sports); // Demonstrate booking and canceling tickets
+        manager.addEvent(sports);
+        manager.displayAllEvents();
+
+        
         manager.bookEventTickets("Summer Music Festival", 10);
         manager.cancelEventTickets("Shakespeare's Hamlet", 5); 
         
         // Display all events
         manager.displayAllEvents();
-        }
+    }
 }
